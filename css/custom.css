@@ -66,7 +66,7 @@ a, a:hover {
 
 /* ie9 hack
 -----------------*/
-.ie .gradient{filter:none \ ;}
+.ie9 .gradient{filter:none;}
 
 /* @media queries
 -----------------*/
