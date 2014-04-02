@@ -13,13 +13,13 @@ html, body {
     height: 100%;
 }
 
+body {
+    
+}
+
 .wrapper {
     min-height: 100%;
     position: relative;
-}
-
-body, p, a, b, li, span, label, input, h1, h2, h3, h4, h5 {
-    
 }
 
 a, a:hover {
@@ -44,6 +44,20 @@ a, a:hover {
 
 /* header
 -----------------*/
+header {
+
+}
+
+.nav > li > a {
+	
+}
+
+.nav > li.active > a,
+.nav > li.active > a:hover,
+.nav > li > a:hover,
+.nav > li > a:focus {
+
+}
 
 /* Slider
 -----------------*/
@@ -55,13 +69,38 @@ a, a:hover {
 	height: 300px;
 }
 
+.btn-custom {
+	background-color: #;
+	border-color: #;
+	color: # !important;
+	-webkit-border-radius: 0px; 
+	-moz-border-radius: 0px; 
+	border-radius: 0px;
+}
+
+.btn-custom:hover {
+	background-color: #;
+	border-color: #;
+}
+
 /* footer
 -----------------*/
 .footer {
-	width: 100%;
-	position: /*absolute*/;
-	bottom: /*0*/;
-	left: /*0*/;
+	
+}
+
+/* content
+-----------------*/
+.feature {
+	display: block;
+}
+
+.feature:hover {
+	text-decoration: none;
+}
+
+.content-area {
+
 }
 
 /* ie9 hack
@@ -70,29 +109,69 @@ a, a:hover {
 
 /* @media queries
 -----------------*/
-@media (min-width: 768px) {...}
+@media (min-width: 768px) {
+
+}
 
 @media (min-width: 992px) {
-	.inner-wrap {
-		padding-bottom: ;
+	
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/*beginning of default fixed menu bar*/
+@media (max-width: 991px) {
+	#map-canvas {
+		height: 300px;
 	}
 }
 
-@media (min-width: 1200px) {...}
+@media (min-width: 768px) and (max-width: 991px) {
 
-@media (min-width: 992px) and (max-width: 1199px) {...}
-
-/*beginning of default fixed menu bar*/
-@media (max-width: 991px) {  }
-
-@media (min-width: 768px) and (max-width: 991px) {...}
+}
 
 @media (max-width: 767px) {
 	.logo img {
 		margin: 0 auto;
 	}
+	#map-canvas {
+		height: 200px;
+	}
 }
 
-@media (max-width: 568px) {...}
+@media (max-width: 568px) {
 
-@media (max-width: 480px) {...}
+}
+
+@media (max-width: 480px) {
+
+}
+
+/* Device specific media queries ----------- */
+/* Tablets */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) { ... }
+
+/* iPads (landscape) */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { ... }
+
+/* iPads (portrait) */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { ... }
+}
+
+/* iPhone */
+@media only screen  
+and (max-device-width : 568px) { /* STYLES GO HERE */ }

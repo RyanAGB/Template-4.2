@@ -11,5 +11,36 @@ $(document).ready(function(){
 		hours: null //optional
 		
 	});
+
+    //Content insert
+    $('#view_section_1').insertAfter('#slider');
+
+    //Error insert
+    $('#error').insertAfter('#slider');
+
+	//Slider
+    jQuery('.camera_wrap').camera({
+        random: true,
+        playPause: false,
+        pagination: false,
+        loader: 'none',
+        navigation: false,
+        portrait: true,
+        height: '26.07692307692308%'
+    });
+
+    //Validation
+    $('#custom_form').formValidation({ 
+		validateText: ["name"],
+		validateEmail: ["email"],
+		validateSpam: true
+	}); 
      
-}); 
+});  // end declaration
+
+$(window).load(function(){
+
+    //Footer Map scrollwheel:false
+    //Main Map
+    
+});
