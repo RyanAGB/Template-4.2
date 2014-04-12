@@ -61,6 +61,22 @@ header {
 
 /* Slider
 -----------------*/
+#slider {
+	height: 596px;
+}
+
+#contact-us #slider {
+	display: none;
+}
+
+.camera_wrap {
+	float: none;
+	max-height: 596px;
+}
+
+.camera_fakehover {
+	min-height: 596px;
+}
 
 /* contact page
 -----------------*/
@@ -92,6 +108,7 @@ header {
 	-webkit-border-radius: 0px; 
 	-moz-border-radius: 0px; 
 	border-radius: 0px;
+	margin-bottom: 30px;
 }
 
 .btn-custom:hover {
@@ -102,13 +119,44 @@ header {
 /* footer
 -----------------*/
 .footer {
-	
+	color: ;
+}
+
+.footer h3 {
+	font-size: ;
+	font-weight: ;
+}
+
+.footer p,
+.footer li {
+	font-size: ;
+	font-weight: ;
+	line-height: ;
+}
+
+.footer ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+address {
+    padding-left: 20px;
+}
+
+address i {
+    float: left;
+    margin-left: -20px;
+    marign-right: 5px;
 }
 
 /* content
 -----------------*/
 .content-area {
 	
+}
+
+.feature-area {
+
 }
 
 .feature {
