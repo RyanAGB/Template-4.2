@@ -1,14 +1,16 @@
 //Javascripts
 $(document).ready(function(){ 
-	$.favicon('favicon.ico');
+	$.favicon('favicon.ico','favicon.ico');
 	
 	menu.contactDetails({
 		
-		phone: null, //optional, can have multiple values[array] 
+		phone: '', //optional, can have multiple values[array] 
 		mobile: null, //optional, can have multiple values[array]
-		email: null, //optional, can have multiple values[array] 
-		address: null, //optional, single value
-		hours: null //optional
+		email: '', //optional, can have multiple values[array] 
+		address: '', //optional, single value
+		hours: [
+            ['','']
+        ] //optional
 		
 	});
 
@@ -29,18 +31,22 @@ $(document).ready(function(){
         height: '26.07692307692308%'
     });
 
+    //Footer Map
+    //Main Map
+
     //Validation
     $('#custom_form').formValidation({ 
 		validateText: ["name"],
 		validateEmail: ["email"],
 		validateSpam: true
 	}); 
+
+    if ($('body#').is('*')) {
+        
+    }
      
 });  // end declaration
 
 $(window).load(function(){
-
-    //Footer Map scrollwheel:false
-    //Main Map
     
 });

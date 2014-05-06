@@ -22,6 +22,10 @@ body {
     position: relative;
 }
 
+h1, h2, h3, h4, b {
+	font-weight: ;
+}
+
 a, a:hover {
 	color: inherit;
 }
@@ -45,18 +49,32 @@ a, a:hover {
 /* header
 -----------------*/
 header {
+	background: ;
+}
 
+.logo {
+	padding-top: ;
+	padding-bottom: ;
+}
+
+.logo a {
+	display: inline-block;
+	max-width: 100%;
 }
 
 .nav > li > a {
-	
+	background-color: ;
+	font-size: ;
+	font-weight: ;
+	color: ;
 }
 
 .nav > li.active > a,
 .nav > li.active > a:hover,
 .nav > li > a:hover,
 .nav > li > a:focus {
-
+	background-color: ;
+	font-weight: ;
 }
 
 /* Slider
@@ -111,7 +129,8 @@ header {
 	margin-bottom: 30px;
 }
 
-.btn-custom:hover {
+.btn-custom:hover,
+.btn-custom:focus {
 	background-color: #;
 	border-color: #;
 }
@@ -119,6 +138,7 @@ header {
 /* footer
 -----------------*/
 .footer {
+	background-color: ;
 	color: ;
 }
 
@@ -151,12 +171,19 @@ address i {
 
 /* content
 -----------------*/
-.content-area {
-	
+.welcome-area {
+	padding-top: ;
+	padding-bottom: ;
+}
+
+.intro-area {
+	padding-top: ;
+	padding-bottom: ;
 }
 
 .feature-area {
-
+	padding-top: ;
+	padding-bottom: ;
 }
 
 .feature {
@@ -167,8 +194,53 @@ address i {
 	text-decoration: none;
 }
 
-.img-box {
+.feature h2 {
+	font-size: ;
+	font-weight: ;
+	margin-top: ;
+	margin-bottom: ;
+	color: ;
+}
+
+.feature p {
+	font-size: ;
+	font-weight: ;
+	color: ;
+}
+
+.content-area {
 	
+}
+
+.content-area h2 {
+	font-size: ;
+	font-weight: ;
+	margin-top: ;
+	margin-bottom: ;
+	color: ;
+}
+
+.content-area p,
+.content-area li,
+.content-area label {
+	font-size: ;
+	font-weight: ;
+	color: ;
+}
+
+.content-area p,
+.content-area ul {
+	margin-bottom: ;
+}
+
+.content-area a {
+	font-weight: ;
+	color: #;
+}
+
+.img-box {
+	display: inline-block;
+	max-width: 100%;
 }
 
 /* ie9 hack
@@ -186,7 +258,9 @@ address i {
 }
 
 @media (min-width: 1200px) {
-
+	.container {
+		width: ;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -198,18 +272,16 @@ address i {
 	#map-canvas {
 		height: 300px;
 	}
+	.logo {
+		text-align: center;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-	.content-area .col-sm-offset-1 {
-		margin-left: 0;
-	}
+	
 }
 
 @media (max-width: 767px) {
-	.logo img {
-		margin: 0 auto;
-	}
 	#map-canvas {
 		height: 200px;
 	}
