@@ -31,6 +31,28 @@ $(document).ready(function(){
         height: '26.07692307692308%'
     });
 
+    //Gallery
+    if(Modernizr.touch && $(".fancybox").length > 0 )
+    // { 
+    //    var myPhotoSwipe = $(".fancybox").photoSwipe({ enableMouseWheel: false , enableKeyboard: false });
+    // }
+    // else
+    // {
+    //     /* Apply to single image */
+    //     $("a.fancybox").fancybox();
+
+    //     /* Apply fancybox to multiple items */
+    //     $("a.fancybox[rel='gallery_group']").fancybox({
+    //         'transitionIn'    :    'elastic',
+    //         'transitionOut'    :    'elastic',
+    //         'speedIn'        :    600, 
+    //         'speedOut'        :    200 
+    //     });
+    // }
+
+    //FAQ
+    // $('.faq-list').goFaq ();
+
     //Footer Map
     //Main Map
 

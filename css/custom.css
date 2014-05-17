@@ -2,7 +2,9 @@
 --------------*/
 @import url('http://cdn.myld.com.au/1/js/plugins/CameraSlider/1.3.4/camera.min.css');
 @import url('http://cdn.myld.com.au/1/js/cform_validation/validation-2.1.min.css');
-
+/*@import url('http://cdn.myld.com.au/1/fancybox/jquery.fancybox-1.3.4.min.css');
+@import url('http://cdn.myld.com.au/1/js/plugins/PhotoSwipe/photoswipe.min.css');*/ /* gallery */
+/*@import url('http://cdn.myld.com.au/1/js/plugins/Faq/faq.min.css');*/ /*FAQ*/
 
 /* @font-faces
 --------------*/
@@ -246,10 +248,20 @@ address i {
 	color: #;
 }
 
+/*.fancybox,*/
 .img-box {
 	display: inline-block;
 	max-width: 100%;
 }
+
+/*.fancybox:hover {
+	
+}
+*/
+/*#faq-number {
+	background-color: #;
+	line-height: ;
+}*/
 
 /* ie9 hack
 -----------------*/
