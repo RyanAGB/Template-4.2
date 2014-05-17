@@ -15,10 +15,10 @@ $(document).ready(function(){
 	});
 
     //Content insert
-    $('#view_section_1').insertAfter('#slider');
+    $('#view_section_1').appendTo('#main-content');
 
     //Error insert
-    $('#error').insertAfter('#slider');
+    $('#error').appendTo('#main-content');
 
 	//Slider
     jQuery('.camera_wrap').camera({
@@ -41,7 +41,7 @@ $(document).ready(function(){
 		validateSpam: true
 	}); 
 
-    if ($('body#').is('*')) {
+    if ($('body#home').is('*')) {
         
     }
      

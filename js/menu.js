@@ -28,7 +28,7 @@
   };
 
   Plugin.prototype = {
-    defaults: { 
+    defaults: {
 	  customwidth: 270,
 	  duration: 400
     },
@@ -38,7 +38,7 @@
 		  if (enablePopup) {
 			this.browserPopup();
 		  } else {
-			this.dom(); 
+			this.dom();
 			this.menuFunctions();
 		  }		   
       return this;
