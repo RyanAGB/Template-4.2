@@ -18,7 +18,7 @@
 	for (i=0; i<navList.length; i++) {
 
 		var navItem = navList[i],
-			navLink = navItem.replace(' ', '-').toLowerCase();
+			navLink = navItem.replace(/\s/g, '-').toLowerCase();
 
 		if (navLink == fileName) {
 			$('.nav').append('<li class="active"><a href="'+

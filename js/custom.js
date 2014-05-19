@@ -14,6 +14,9 @@ $(document).ready(function(){
 		
 	});
 
+    //Navigation
+    // $('.navbar .nav').addClass('nav-justified');
+
     //Content insert
     $('#view_section_1').appendTo('#main-content');
 
@@ -32,16 +35,12 @@ $(document).ready(function(){
     });
 
     //Gallery
-    if(Modernizr.touch && $(".fancybox").length > 0 )
+    // if(Modernizr.touch && $(".fancybox").length > 0 )
     // { 
     //    var myPhotoSwipe = $(".fancybox").photoSwipe({ enableMouseWheel: false , enableKeyboard: false });
     // }
     // else
     // {
-    //     /* Apply to single image */
-    //     $("a.fancybox").fancybox();
-
-    //     /* Apply fancybox to multiple items */
     //     $("a.fancybox[rel='gallery_group']").fancybox({
     //         'transitionIn'    :    'elastic',
     //         'transitionOut'    :    'elastic',
