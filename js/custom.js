@@ -59,7 +59,8 @@ $(document).ready(function(){
     $('#custom_form').formValidation({ 
 		validateText: ["name"],
 		validateEmail: ["email"],
-		validateSpam: true
+		validateSpam: true,
+        captchaTheme: 'greyscale'
 	}); 
 
     if ($('body#home').is('*')) {
