@@ -1,6 +1,6 @@
 //Javascripts
 $(document).ready(function(){ 
-	$.favicon('favicon.ico','favicon.ico');
+	$.favicon('favicon','favicon');
 	
 	menu.contactDetails({
 		
