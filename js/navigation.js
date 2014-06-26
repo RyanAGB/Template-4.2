@@ -10,8 +10,6 @@
 		current_path = window.location.pathname.split('/').pop(),
 		current = current_path.slice(0, -5);
 
-		alert(current_path);
-
 	$('.navbar-placeholder').append('<div class="navbar">'+
         '<div class="collapse navbar-collapse">'+
         '<ul class="nav navbar-nav">'+
