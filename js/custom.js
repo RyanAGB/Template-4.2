@@ -1,4 +1,17 @@
 //Javascripts
+
+//Navigation
+// $('.navbar .nav').addClass('nav-justified');
+
+//Content insert
+$('#view_section_1').appendTo('#main-content');
+
+//Error insert
+$('#error').appendTo('#main-content');
+
+//Footer Map
+//Main Map
+
 $(document).ready(function(){ 
 	$.favicon('favicon','favicon');
 	
@@ -13,15 +26,6 @@ $(document).ready(function(){
         ] //optional
 		
 	});
-
-    //Navigation
-    // $('.navbar .nav').addClass('nav-justified');
-
-    //Content insert
-    $('#view_section_1').appendTo('#main-content');
-
-    //Error insert
-    $('#error').appendTo('#main-content');
 
 	//Slider
     jQuery('.camera_wrap').camera({
@@ -52,9 +56,6 @@ $(document).ready(function(){
     //FAQ
     // $('.faq-list').goFaq ();
 
-    //Footer Map
-    //Main Map
-
     //Validation
     $('#custom_form').formValidation({ 
 		validateText: ["name"],
@@ -70,5 +71,7 @@ $(document).ready(function(){
 });  // end declaration
 
 $(window).load(function(){
-    
+
+    //Footer Map
+    //Main Map
 });
