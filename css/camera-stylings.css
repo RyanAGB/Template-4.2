@@ -57,8 +57,8 @@
 .camera_prev > span,
 .camera_next > span {
 	background: url(../img/slider-nav.png) no-repeat left top;
-	height: 46px;
 	width: 46px;
+	height: 46px;
 }
 
 .camera_next > span {

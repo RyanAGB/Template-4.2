@@ -73,5 +73,7 @@ $(document).ready(function(){
 $(window).load(function(){
 
     //Footer Map
+    // mapfooter();
     //Main Map
+    // mapcanvas();
 });
