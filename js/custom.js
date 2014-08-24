@@ -57,12 +57,12 @@ $(document).ready(function(){
     // $('.faq-list').goFaq ();
 
     //Validation
-    $('#custom_form').formValidation({ 
-		validateText: ["name"],
-		validateEmail: ["email"],
-		validateSpam: true,
-        captchaTheme: 'greyscale'
-	}); 
+    $('#custom_form').smartCaptcha({ 
+        validateText: ["name", "message", "phone"],
+        validateEmail: ["email"],
+        redirectLink: "http://api.jquery.com/jquery.fn.extend/",
+        validateStyle: "default"
+    }); 
 
     if ($('body#home').is('*')) {
         
