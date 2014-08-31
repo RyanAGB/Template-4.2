@@ -1,7 +1,7 @@
 /* @imports
 --------------*/
 @import url('http://cdn.myld.com.au/1/js/plugins/CameraSlider/1.3.4/camera.min.css');
-@import url('http://cdn.myld.com.au/1/js/cform_validation/validation-2.2.min.css');
+@import url('http://cdn.myld.com.au/1/js/plugins/smartCaptcha/smartCaptcha-v1.0.min.css');
 /*@import url('http://cdn.myld.com.au/1/fancybox/jquery.fancybox-1.3.4.min.css');
 @import url('http://cdn.myld.com.au/1/js/plugins/PhotoSwipe/photoswipe.min.css');*/ /* gallery */
 /*@import url('http://cdn.myld.com.au/1/js/plugins/Faq/faq.min.css');*/ /*FAQ*/
@@ -139,6 +139,7 @@ header {
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
 	border-radius: 0;
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
@@ -296,7 +297,8 @@ address i {
 	margin-bottom: ;
 }
 
-.content-area a {
+.content-area p a,
+.content-area li a {
 	font-weight: ;
 	color: #;
 }
