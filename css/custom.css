@@ -245,33 +245,6 @@ address i {
 	margin-bottom: ;
 }
 
-.feature-area {
-	padding-top: ;
-	padding-bottom: ;
-}
-
-.feature {
-	display: block;
-}
-
-.feature:hover {
-	text-decoration: none;
-}
-
-.feature h2 {
-	font-size: ;
-	font-weight: ;
-	margin-top: ;
-	margin-bottom: ;
-	color: ;
-}
-
-.feature p {
-	font-size: ;
-	font-weight: ;
-	color: ;
-}
-
 .content-area {
 	
 }
@@ -301,6 +274,33 @@ address i {
 .content-area li a {
 	font-weight: ;
 	color: #;
+}
+
+.feature-area {
+	padding-top: ;
+	padding-bottom: ;
+}
+
+.feature {
+	display: block;
+}
+
+.feature:hover {
+	text-decoration: none;
+}
+
+.feature h2 {
+	font-size: ;
+	font-weight: ;
+	margin-top: ;
+	margin-bottom: ;
+	color: ;
+}
+
+.feature p {
+	font-size: ;
+	font-weight: ;
+	color: ;
 }
 
 /*.fancybox,*/
