@@ -5,6 +5,7 @@
 
 //Content insert
 $('#view_section_1').appendTo('#main-content');
+// $('.map-area').appendTo('.slider-area');
 
 //Error insert
 $('#error').appendTo('#main-content');

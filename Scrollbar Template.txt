@@ -1,0 +1,227 @@
+Scrollbar Template
+
++++++++++++++++++++++++++++++++++++++
+
+==================================
+
+HTML
+
+==================================
+
+scrollbar ++++++++++++++++++++++++
+
+<div id="scroller">
+    <ul>
+        <li class="active"><a href="#item">Item</a></li>
+        <li><a href="#item">Item</a></li>
+    </ul>
+</div>
+
+imagroll  ++++++++++++++++++++++++
+
+<div class="img-roll l-indent">
+    <div class="img-box show" data-link="plumbing-drainage">
+        <img src="imghere" alt="">
+    </div>
+    <div class="img-box" data-link="hot-water">
+        <img src="imghere" alt="">
+    </div>
+</div>
+
+content   ++++++++++++++++++++++++
+
+<div id="scrollable">
+	<!-- content -->
+    <div class="content-box" id="plumbing-drainage">
+        <h2 itemprop="name">Title</h2>
+        <p itemprop="description">Text</p>
+    </div>
+	<!-- content ends -->
+	<!-- content -->
+    <div class="content-box" id="plumbing-drainage">
+        <h2 itemprop="name">Title</h2>
+        <p itemprop="description">Text</p>
+    </div>
+	<!-- content ends -->
+</div>
+
+==================================
+
+CSS
+
+==================================
+
+content   ++++++++++++++++++++++++
+
+#scrollable {
+	max-height: 0px;
+	overflow: auto;
+}
+
+#scroller ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+#scroller ul li a {
+	font-family: ;
+	font-size: 0px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+#scroller ul li.active a,
+#scroller ul li.active a:hover,
+#scroller ul li a:hover,
+#scroller ul li a:focus {
+	color: #000;
+	text-decoration: none;
+	outline: none;
+}
+
+.img-roll {
+	font-size: 0;
+	line-height: 0;
+	padding-top: 1px;
+	text-align: center;
+}
+
+.img-roll .img-box {
+	display: none;
+}
+
+.img-roll .img-box.show {
+	display: inline-block !important;
+}
+
+#scrollable .content-box {
+	padding-bottom: 0px;
+}
+
+#scrollable .content-box:last-child {
+	min-height: 0px;
+}
+
+scrollbar   ++++++++++++++++++++++++
+
+#scrollable .mCSB_buttonUp {
+	background: url(img) center center no-repeat scroll;
+}
+
+#scrollable .mCSB_buttonDown {
+	background: url(img) center center no-repeat scroll;
+}
+
+#scrollable .mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail {
+	width: 5px;
+}
+
+#scrollable .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #8f8f8f;
+	width: 7px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+==================================
+
+Javascript
+
+==================================
+
+//Custom Function
+function hashTag(hash_tag) {
+
+  var ref = hash_tag;
+
+  $('.img-roll .img-box').removeClass('show');
+  $('.img-roll .img-box[data-link="'+ref+'"]').addClass('show');
+}
+
+//Custom Scrollbar
+$("#scrollable").mCustomScrollbar({
+    scrollButtons:{
+        enable:true
+    },
+            callbacks:{
+                whileScrolling: function(){
+                    var lastId,
+                    topMenu = $('#scroller'),
+                    menuItems = topMenu.find('a'),
+                    containerHeight = $('#scrollable').offset().top,
+                    scrollItems = menuItems.map(function(){
+                          var item = $($(this).attr("href"));
+                          if (item.length) { return item; }
+                    });
+
+                    var cur = scrollItems.map(function(){
+                        if ($(this).offset().top <= containerHeight + 20) {
+                            return this;
+                        }
+                    });
+                    cur = cur[cur.length-1];
+                    var id = cur && cur.length ? cur[0].id : "";
+                    // alert(id);
+                    if (lastId !== id) {
+                        lastId = id;
+                        menuItems
+                            .parent().removeClass("active")
+                            .end().filter("[href=#"+id+"]").parent().addClass("active");
+                    }
+
+                    hashTag(id);
+
+                }
+            },
+            advanced:{
+                updateOnBrowserResize: true
+            },
+    theme: 'light-thick' //'dark', 'light-2', 'dark-2', 'light-thick', 'dark-thick', 'light-thin', 'dark-thin'
+});
+
+//Scroll Animation
+$("#scroller a").on('click', function(e) {
+
+    e.preventDefault();
+    var hash = $(this).attr('href');
+    var imgTag = hash.replace('#', '');
+
+    $("#scrollable").mCustomScrollbar('scrollTo',hash);
+});
+
+
+$(window).load(function(){
+
+    $('#scrollable').mCustomScrollbar('update');
+
+    //check if hash tag exists in the URL
+    function scrolltoTop(hash) {
+        if ($('#scrollable').length) {
+            var height = $('#scrollable').offset().top,
+                scrollPh = height - 50,
+                win = $(window).width();
+            if (win > 991) {
+                $("html, body").animate({ scrollTop: height - 180}, 200);
+            } else if (win < 992) {
+                $("html, body").animate({ scrollTop: scrollPh}, 200);
+            }
+
+            // alert(win);
+
+            $("#scrollable").mCustomScrollbar('scrollTo',hash);
+        }
+    }
+
+    if(window.location.hash) {
+        var hash_tag = window.location.hash;
+
+        scrolltoTop(hash_tag);
+    }
+});
+
+
+$(window).resize(function() {
+    $('#scrollable').mCustomScrollbar('update');
+});
