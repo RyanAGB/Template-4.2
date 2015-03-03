@@ -19,7 +19,7 @@
 	for (i=0; i<navList.length; i++) {
 
 		var navItem = navList[i],
-			navLink = navItem.replace(/\s/g, '-').toLowerCase().replace('-&-', '-').replace(',', '').replace('/', '');
+			navLink = navItem.replace(/\s/g, '-').toLowerCase().replace('-&-', '-').replace(',', '').replace('-/-', '-').replace('/', '').replace('\'', '');
 
 		if (navLink == current) {
 			$('.navbar .nav').append('<li class="active"><a href="'+

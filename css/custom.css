@@ -2,7 +2,8 @@
 --------------*/
 @import url('http://cdn.myld.com.au/1/js/plugins/CameraSlider/1.3.4/camera.min.css');
 @import url('http://cdn.myld.com.au/1/js/plugins/smartCaptcha/smartCaptcha-v1.0.min.css');
-/*@import url('http://cdn.myld.com.au/1/fancybox/jquery.fancybox-1.3.4.min.css');
+/*@import url('http://cdn.myld.com.au/1/js/fancybox2/jquery.fancybox.css');
+@import url('http://cdn.myld.com.au/1/js/fancybox2/helpers/jquery.fancybox-thumbs.css');
 @import url('http://cdn.myld.com.au/1/js/plugins/PhotoSwipe/photoswipe.min.css');*/ /* gallery */
 /*@import url('http://cdn.myld.com.au/1/js/plugins/Faq/faq.min.css');*/ /*FAQ*/
 
@@ -30,13 +31,14 @@ h1, h2, h3, h4, b {
 	font-weight: ;
 }
 
-a, a:hover {
+a, a:hover, a:focus {
 	color: inherit;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 	-ms-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+	outline: none;
 }
 
 img {
@@ -81,17 +83,17 @@ header {
 	max-width: 100%;
 }
 
-.nav > li > a {
+.navbar .nav > li > a {
 	background-color: ;
 	font-size: ;
 	font-weight: ;
 	color: ;
 }
 
-.nav > li.active > a,
-.nav > li.active > a:hover,
-.nav > li > a:hover,
-.nav > li > a:focus {
+.navbar .nav > li.active > a,
+.navbar .nav > li.active > a:hover,
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
 	background-color: ;
 	font-weight: ;
 }

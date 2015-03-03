@@ -46,11 +46,25 @@ $(document).ready(function(){
     // }
     // else
     // {
+    // /* Apply to single image */
+    //     $("a.fancybox").fancybox();
+
+    // /* Apply fancybox to multiple items */
     //     $("a.fancybox[rel='gallery_group']").fancybox({
     //         'transitionIn'    :    'elastic',
     //         'transitionOut'    :    'elastic',
     //         'speedIn'        :    600, 
     //         'speedOut'        :    200 
+    //     });
+
+    // /* Apply with thumbnails visible */
+    //     $("a.fancybox").fancybox({
+    //         helpers : {
+    //             thumbs : {
+    //                 width: 200,
+    //                 height: 200
+    //             }
+    //         }
     //     });
     // }
 
