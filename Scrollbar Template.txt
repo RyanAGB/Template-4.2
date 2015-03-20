@@ -191,8 +191,26 @@ $("#scroller a").on('click', function(e) {
     $("#scrollable").mCustomScrollbar('scrollTo',hash);
 });
 
+//Tab linking
+function tabShow(hash) {
+    $('#tab-items a[href="'+hash+'"]').tab('show');
+    var height = $('.tab-content').offset().top,
+        scrollPh = height - 50,
+        win = $(window).width();
+    if (win > 991) {
+        $("html, body").animate({ scrollTop: height}, 200);
+    } else if (win < 992) {
+        $("html, body").animate({ scrollTop: scrollPh}, 200);
+    }
+}
 
 $(window).load(function(){
+
+    //Location Hash
+    if(window.location.hash) {
+        var hash = window.location.hash;
+        tabShow(hash);
+    }
 
     $('#scrollable').mCustomScrollbar('update');
 
