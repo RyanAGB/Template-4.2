@@ -343,6 +343,32 @@ address i {
 	line-height: ;
 }*/
 
+/* isotope */
+/*#filters {
+	float: none;
+	width: 100%;
+}
+
+#filters li {
+	float: none;
+	display: inline-block;
+}
+
+.gallery-area {
+	max-width: none !important;
+	width: auto !important;
+}
+
+.item {
+	text-align: center;
+}
+
+.item .fancybox,
+.item .fancybox img {
+	width: 100%;
+	max-width: none;
+}*/
+
 
 /* error
 -----------------*/
@@ -393,6 +419,10 @@ address i {
 	#map-canvas {
 		height: 200px;
 	}
+	/* isotope */
+	/*.gallery-area .item {
+		width: 50% !important;
+	}*/
 }
 
 @media (max-width: 568px) {
@@ -400,7 +430,7 @@ address i {
 }
 
 @media (max-width: 480px) {
-
+	
 }
 
 /* Device specific media queries ----------- */

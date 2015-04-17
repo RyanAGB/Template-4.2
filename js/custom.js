@@ -91,4 +91,9 @@ $(window).load(function(){
     // mapfooter();
     //Main Map
     // mapcanvas();
+
+    if (window.location.hash) {
+        var hash = window.location.hash;
+        tabShow(hash);
+    }
 });
