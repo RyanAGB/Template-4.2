@@ -26,6 +26,7 @@ $(document).ready(function(){
 //hashtag for tabs
 
 $(document).ready(function(){
+    
     //Location Hash
     if(window.location.hash) {
       if ($('body#lpg-services').is('*') || $('body#additional-automotive-services').is('*')) {
@@ -40,6 +41,42 @@ $(document).ready(function(){
             $('#tab-items a[href="'+hash+'"]').tab('show');
         });
     }
+
+    //Camera custom button
+    jQuery('.slide-prev').click(function(){
+        jQuery('.camera_prev').trigger('click');
+    });
+
+    jQuery('.slide-next').click(function(){
+        jQuery('.camera_next').trigger('click');
+    });
+
+    // Set active for the first bullet when document ready;;
+    $('.pagination').first().addClass('active');
+    // Since you called it as $.backstretch, it's attached to the body
+    var instance = $("#mainBg").data("backstretch");
+    $('.pagination').click(function () {
+        var index = $('.pagination').index( $(this) );
+        $('.pagination').removeClass('active');
+        $(this).addClass('active');
+        // Show the slide based on the clicked index
+        instance.show(index);
+        // Return false, so that the click doesn't change the page hash
+        return false;
+    });
+    // Set the current pagination active while running as slideshow
+    $(window).on("backstretch.before", function (e, instance, index) {
+        $('.pagination').removeClass('active').eq(index).addClass('active');
+        });
+
+    // Add to html
+    // <ul>
+    //       <li class="pagination"></li>
+    //       <li class="pagination"></li>
+    //       <li class="pagination"></li>
+    //       <li class="pagination"></li>
+    //       <li class="pagination"></li>
+    // </ul>
 
 }); 
 
